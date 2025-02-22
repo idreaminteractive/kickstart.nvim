@@ -663,7 +663,7 @@ require('lazy').setup({
         -- pyright = {},
         elixirls = {},
         tailwindcss = {
-
+          filetypes = { 'html', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'elixir', 'heex' },
           filetypes_include = { 'heex' },
           root_dir = require('lspconfig').util.root_pattern(
             'tailwind.config.js',
