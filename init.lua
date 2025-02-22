@@ -678,6 +678,9 @@ require('lazy').setup({
           settings = {
             tailwindCSS = {
               -- includeLanguages = { heex = 'html' },
+              experimental = {
+                classRegex = '([\\w-/:]+)',
+              },
               includeLanguages = {
                 elixir = 'html-eex',
                 eelixir = 'html-eex',
