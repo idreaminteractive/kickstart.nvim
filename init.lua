@@ -664,7 +664,6 @@ require('lazy').setup({
         elixirls = {},
         tailwindcss = {
           filetypes_include = { 'heex' },
-
           root_dir = require('lspconfig').util.root_pattern(
             'tailwind.config.js',
             'tailwind.config.ts',
