@@ -663,23 +663,20 @@ require('lazy').setup({
         -- pyright = {},
         elixirls = {},
         tailwindcss = {
-          filetypes = { 'html', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'elixir', 'heex' },
-          root_dir = require('lspconfig').util.root_pattern(
-            'tailwind.config.js',
-            'tailwind.config.ts',
-            'postcss.config.js',
-            'postcss.config.ts',
-            'package.json',
-            'node_modules',
-            '.git',
-            'mix.exs'
-          ),
+          -- root_dir = require('lspconfig').util.root_pattern(
+          --   'tailwind.config.js',
+          --   'tailwind.config.ts',
+          --   'postcss.config.js',
+          --   'postcss.config.ts',
+          --   'package.json',
+          --   'node_modules',
+          --   '.git',
+          --   'mix.exs'
+          -- ),
+          filetypes = { 'heex', 'html', 'ex', 'tsx' },
           settings = {
             tailwindCSS = {
               -- includeLanguages = { heex = 'html' },
-              experimental = {
-                classRegex = '([\\w-/:]+)',
-              },
               includeLanguages = {
                 elixir = 'html-eex',
                 eelixir = 'html-eex',
