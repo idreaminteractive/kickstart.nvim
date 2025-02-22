@@ -663,6 +663,7 @@ require('lazy').setup({
         -- pyright = {},
         elixirls = {},
         tailwindcss = {
+
           filetypes_include = { 'heex' },
           root_dir = require('lspconfig').util.root_pattern(
             'tailwind.config.js',
@@ -674,6 +675,11 @@ require('lazy').setup({
             '.git',
             'mix.exs'
           ),
+          settings = {
+            tailwindCSS = {
+              includeLanguages = { heex = 'html' },
+            },
+          },
         },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
