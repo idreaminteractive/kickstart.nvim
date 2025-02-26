@@ -646,11 +646,19 @@ require('lazy').setup({
           settings = {
             tailwindCSS = {
               -- includeLanguages = { heex = 'html' },
+              experimental = {
+                classRegex = {
+                  -- For Phoenix `class="..."` syntax
+                  { 'class[:]\\s*"([^"]*)"', 1 },
+                  -- For Phoenix `~H` and `HEEx` tags
+                  { '~H"([^"]*)"', 1 },
+                },
+              },
               includeLanguages = {
+
                 heex = 'html',
                 elixir = 'html-eex',
                 eelixir = 'html-eex',
-                -- heex = 'html-eex',
               },
             },
           },
