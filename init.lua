@@ -359,7 +359,18 @@ require('lazy').setup({
         -- },
         pickers = {
           find_files = {
-            hidden = true,
+            find_command = {
+              'rg',
+              '--files',
+              '--hidden',
+              '--no-ignore-vcs',
+              '-g',
+              '!**/.git/*',
+              '-g',
+              '!**/node_modules/*',
+              '-g',
+              '!**/.repro/*', -- just to hide .repro rtp
+            },
           },
         },
         extensions = {
