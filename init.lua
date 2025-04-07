@@ -626,7 +626,11 @@ require('lazy').setup({
         gopls = {},
         -- pyright = {},
         elixirls = {},
-        gleam = {},
+        gleam = {
+          servers = {
+            gleam = {},
+          },
+        },
         tailwindcss = {
           -- root_dir = require('lspconfig').util.root_pattern(
           --   'tailwind.config.js',
