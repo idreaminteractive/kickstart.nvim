@@ -658,7 +658,7 @@ require('lazy').setup({
                   { 'class[:]\\s*"([^"]*)"', 1 },
                   -- For Phoenix `~H` and `HEEx` tags
                   { '~H"([^"]*)"', 1 },
-                  { 'class([^"]*)"', 1 },
+                  { 'class\\("([^"]*)"\\)', 1 },
                 },
               },
               includeLanguages = {
