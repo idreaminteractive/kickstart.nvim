@@ -626,7 +626,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         gopls = {},
-        yamlls = {},
+        yamlfmt = {},
         -- pyright = {},
         elixirls = {},
         tailwindcss = {
