@@ -625,6 +625,7 @@ require('lazy').setup({
       require('lspconfig').svelte.setup {}
       local servers = {
         -- clangd = {},
+        templ = {},
         gopls = {},
         yamlfmt = {},
         -- pyright = {},
