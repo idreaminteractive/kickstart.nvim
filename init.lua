@@ -628,6 +628,7 @@ require('lazy').setup({
         templ = {},
         gopls = {},
         yamlfmt = {},
+        sqlfmt = {},
         -- pyright = {},
         elixirls = {},
         tailwindcss = {
@@ -746,41 +747,45 @@ require('lazy').setup({
         desc = '[F]ormat buffer',
       },
     },
-    opts = {
-      notify_on_error = false,
-      format_on_save = function(bufnr)
-        -- Disable "format_on_save lsp_fallback" for languages that don't
-        -- have a well standardized coding style. You can add additional
-        -- languages here or re-enable it for the disabled ones.
-        local disable_filetypes = { c = true, cpp = true }
-        local lsp_format_opt
-        if disable_filetypes[vim.bo[bufnr].filetype] then
-          lsp_format_opt = 'never'
-        else
-          lsp_format_opt = 'fallback'
-        end
-        return {
-          timeout_ms = 500,
-          lsp_format = lsp_format_opt,
-        }
-      end,
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        yaml = { 'yamlfmt' },
-        sql = { 'sleek' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
-      },
-      formatters = {
-        sleek = {
-          command = 'sleek',
-          args = { '--stdin' },
+    opts = function()
+      local mason_registry = require 'mason-registry'
+      local sqlfmt_path = mason_registry.get_package('sqlfmt'):get_install_path() .. '/sqlfmt'
+      return {
+        notify_on_error = false,
+        format_on_save = function(bufnr)
+          -- Disable "format_on_save lsp_fallback" for languages that don't
+          -- have a well standardized coding style. You can add additional
+          -- languages here or re-enable it for the disabled ones.
+          local disable_filetypes = { c = true, cpp = true }
+          local lsp_format_opt
+          if disable_filetypes[vim.bo[bufnr].filetype] then
+            lsp_format_opt = 'never'
+          else
+            lsp_format_opt = 'fallback'
+          end
+          return {
+            timeout_ms = 500,
+            lsp_format = lsp_format_opt,
+          }
+        end,
+        formatters_by_ft = {
+          lua = { 'stylua' },
+          yaml = { 'yamlfmt' },
+          sql = { 'sqlfmt' },
+          -- Conform can also run multiple formatters sequentially
+          -- python = { "isort", "black" },
+          --
+          -- You can use 'stop_after_first' to run the first available formatter from the list
+          -- javascript = { "prettierd", "prettier", stop_after_first = true },
         },
-      },
-    },
+        formatters = {
+          sqlfmt = {
+            command = sqlfmt_path,
+            args = { '-' },
+          },
+        },
+      }
+    end,
   },
 
   { -- Autocompletion
