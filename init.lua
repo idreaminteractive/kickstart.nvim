@@ -767,12 +767,18 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         yaml = { 'yamlfmt' },
-        sql = { 'sql_formatter' },
+        sql = { 'sleek' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      },
+      formatters = {
+        sleek = {
+          command = 'sleek',
+          args = { '--stdin' },
+        },
       },
     },
   },
