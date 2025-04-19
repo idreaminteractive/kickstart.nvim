@@ -769,12 +769,17 @@ require('lazy').setup({
         formatters_by_ft = {
           lua = { 'stylua' },
           yaml = { 'yamlfmt' },
-          sql = { 'bunx sql-formatter' },
+          sql = { 'sqlfmt' },
           -- Conform can also run multiple formatters sequentially
           -- python = { "isort", "black" },
           --
           -- You can use 'stop_after_first' to run the first available formatter from the list
           -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        },
+        formatters = {
+          sqlfmt = {
+            command = 'bunx sql-formatter',
+          },
         },
       }
     end,
