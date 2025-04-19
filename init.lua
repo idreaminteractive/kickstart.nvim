@@ -748,8 +748,6 @@ require('lazy').setup({
       },
     },
     opts = function()
-      local mason_registry = require 'mason-registry'
-      local sqlfmt_path = mason_registry.get_package('sleek'):get_install_path() .. '/sleek'
       return {
         notify_on_error = false,
         format_on_save = function(bufnr)
@@ -771,7 +769,7 @@ require('lazy').setup({
         formatters_by_ft = {
           lua = { 'stylua' },
           yaml = { 'yamlfmt' },
-          sql = { 'sleek' },
+          sql = { 'sql_formatter' },
           -- Conform can also run multiple formatters sequentially
           -- python = { "isort", "black" },
           --
@@ -779,10 +777,7 @@ require('lazy').setup({
           -- javascript = { "prettierd", "prettier", stop_after_first = true },
         },
         formatters = {
-          sleek = {
-            command = sqlfmt_path,
-            args = { '--stdin' },
-          },
+          sql_formatter = {},
         },
       }
     end,
