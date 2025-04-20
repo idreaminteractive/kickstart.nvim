@@ -652,7 +652,7 @@ require('lazy').setup({
             '.git',
             'mix.exs'
           ),
-          filetypes = { 'gleam', 'heex', 'elixir', 'html', 'ex', 'tsx' },
+          filetypes = { 'gleam', 'heex', 'elixir', 'html', 'ex', 'tsx', 'templ' },
           settings = {
             tailwindCSS = {
               -- includeLanguages = { heex = 'html' },
