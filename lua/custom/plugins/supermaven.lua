@@ -6,4 +6,5 @@ require('lazy').setup({
     end,
   },
 }, {})
+print 'Hello'
 return {}
