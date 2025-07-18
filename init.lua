@@ -1,4 +1,4 @@
---[[
+--[[init
 
 Kickstart Guide:
 
@@ -355,7 +355,10 @@ require('lazy').setup({
         --
         defaults = {
           mappings = {
-            i = { ['<C-j>'] = actions.move_selection_next },
+            i = {
+              ['<C-j>'] = actions.move_selection_next,
+              ['<C-k>'] = actions.move_selection_previous,
+            },
           },
         },
         pickers = {
