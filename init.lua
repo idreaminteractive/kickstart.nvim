@@ -1037,6 +1037,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   -- require 'kickstart.plugins.debug',
+  --
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
@@ -1055,12 +1056,13 @@ require('lazy').setup({
   -- you can continue same window with `<space>sr` which resumes last telescope search
   --
   --
+  -- y
   {
     'supermaven-inc/supermaven-nvim',
     config = function()
       require('supermaven-nvim').setup {
         keymaps = {
-          accept_suggestion = '<C-i>',
+          accept_suggestion = '<leader>y',
           clear_suggestion = '<C-]>',
           accept_word = '<C-l>',
         },
