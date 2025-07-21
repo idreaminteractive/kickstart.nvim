@@ -1064,7 +1064,7 @@ require('lazy').setup({
         keymaps = {
           accept_suggestion = '<Tab>',
           clear_suggestion = '<C-]>',
-          accept_word = '<C-[>',
+          accept_word = '<C-}>',
         },
         ignore_filetypes = { templ = true },
       }
