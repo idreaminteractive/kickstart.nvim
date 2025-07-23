@@ -68,8 +68,6 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
--- Enable status line at top
-vim.opt.statusline = '%F %m%r%h%w [%Y] [%{&ff}] %=%l,%c %p%%'
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -78,7 +76,7 @@ vim.opt.statusline = '%F %m%r%h%w [%Y] [%{&ff}] %=%l,%c %p%%'
 --   vim.opt.clipboard = 'unnamedplus'
 -- end)
 --
-
+vim.opt.winbar = '%F'
 -- In your init.lua
 local function copy_to_clipboard(text)
   local base64_text = vim.fn.system('echo -n "' .. text .. '" | base64 -w 0')
