@@ -76,7 +76,7 @@ vim.opt.showmode = false
 --   vim.opt.clipboard = 'unnamedplus'
 -- end)
 --
-vim.opt.winbar = '%F'
+vim.opt.winbar = '%f'
 -- In your init.lua
 local function copy_to_clipboard(text)
   local base64_text = vim.fn.system('echo -n "' .. text .. '" | base64 -w 0')
