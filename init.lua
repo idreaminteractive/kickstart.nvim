@@ -1068,7 +1068,7 @@ require('lazy').setup({
         },
         ignore_filetypes = { templ = true },
         color = {
-          suggestion_color = '#BABABA',
+          suggestion_color = '#DDDDDD',
           cterm = 244,
         },
       }
