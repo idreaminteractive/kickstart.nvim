@@ -670,7 +670,6 @@ require('lazy').setup({
         yamlfmt = {},
         -- pyright = {},
         sleek = {},
-        elixirls = {},
         tailwindcss = {
           -- root_dir = require('lspconfig').util.root_pattern(
           --   'tailwind.config.js',
@@ -770,6 +769,15 @@ require('lazy').setup({
             require('lspconfig')[server_name].setup(server)
           end,
         },
+      }
+      require('lspconfig').lexical.setup {
+        cmd = { '/workspace/lexical/_build/dev/package/lexical/bin/start_lexical.sh' },
+        root_dir = function(fname)
+          return util.root_pattern('mix.exs', '.git')(fname) or vim.loop.cwd()
+        end,
+        filetypes = { 'elixir', 'eelixir', 'heex' },
+        -- optional settings
+        settings = {},
       }
     end,
   },
