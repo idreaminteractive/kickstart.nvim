@@ -1066,6 +1066,10 @@ require('lazy').setup({
           accept_word = '<C-}>',
         },
         ignore_filetypes = { templ = true },
+        color = {
+          suggestion_color = '#ffffff',
+          cterm = 244,
+        },
       }
       require('supermaven-nvim.api').use_free_version()
     end,
