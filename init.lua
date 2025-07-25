@@ -2,6 +2,7 @@
 
 Kickstart Guide:
 
+
   TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
 
     If you don't know what this means, type the following:
@@ -1067,7 +1068,7 @@ require('lazy').setup({
         },
         ignore_filetypes = { templ = true },
         color = {
-          suggestion_color = '#ffffff',
+          suggestion_color = '#BABABA',
           cterm = 244,
         },
       }
