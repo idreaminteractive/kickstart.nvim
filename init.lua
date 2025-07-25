@@ -4,6 +4,7 @@ Kickstart Guide:
 
 
 
+
   TODO: The very first thing you should do is to run the command `:Tutor` in Neovim.
 
     If you don't know what this means, type the following:
@@ -50,6 +51,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
 
@@ -1069,7 +1071,7 @@ require('lazy').setup({
         },
         ignore_filetypes = { templ = true },
         color = {
-          suggestion_color = '#504A4A',
+          suggestion_color = '#655F5F',
           cterm = 244,
         },
       }
