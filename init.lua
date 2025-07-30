@@ -399,6 +399,7 @@ require('lazy').setup({
         },
         pickers = {
           find_files = {
+            theme = 'dropdown',
             hidden = true,
             file_ignore_patterns = { '.git/' },
           },
