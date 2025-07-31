@@ -1078,7 +1078,7 @@ require('lazy').setup({
           clear_suggestion = '<C-]>',
           accept_word = '<C-}>',
         },
-        ignore_filetypes = { templ = true },
+        -- ignore_filetypes = { templ = true },
         color = {
           suggestion_color = '#655F5F',
           cterm = 244,
