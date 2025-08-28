@@ -6,11 +6,7 @@ return {
     local harpoon = require 'harpoon'
 
     -- REQUIRED
-    harpoon:setup {
-      global_settings = {
-        ['save_on_toggle'] = true,
-      },
-    }
+    harpoon:setup()
     -- REQUIRED
 
     vim.keymap.set('n', '<leader>a', function()
