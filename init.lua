@@ -343,6 +343,12 @@ require('lazy').setup({
             hidden = true,
             file_ignore_patterns = { '.git/' },
           },
+          live_grep = {
+            theme = 'dropdown',
+          },
+          buffers = {
+            theme = 'dropdown',
+          },
         },
         extensions = {
           ['ui-select'] = {
