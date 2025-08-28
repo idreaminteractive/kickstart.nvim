@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>e', ':Oil<CR>')
+
 return {
   'stevearc/oil.nvim',
   ---@module 'oil'
