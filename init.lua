@@ -337,8 +337,11 @@ require('lazy').setup({
             hidden = true,
             file_ignore_patterns = { '.git/' },
             layout_config = {
-              width = 0.9,
-              height = 0.9,
+              width = 0.8,
+              height = 0.7,
+              vertical = {
+                preview_width = 0.3,
+              },
             },
           },
           live_grep = {
