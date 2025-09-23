@@ -324,18 +324,10 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
-          theme = 'dropdown',
           mappings = {
             i = {
               ['<C-j>'] = actions.move_selection_next,
               ['<C-k>'] = actions.move_selection_previous,
-            },
-          },
-          layout_config = {
-            horizontal = {
-              width = 0.9,
-              height = 0.9,
-              preview_width = 0.6,
             },
           },
         },
@@ -344,10 +336,15 @@ require('lazy').setup({
             theme = 'dropdown',
             hidden = true,
             file_ignore_patterns = { '.git/' },
+            layout_config = {
+              width = 0.9,
+              height = 0.9,
+              preview_width = 0.6,
+            },
           },
-          -- live_grep = {
-          --   theme = 'dropdown',
-          -- },
+          live_grep = {
+            theme = 'dropdown',
+          },
           buffers = {
             theme = 'dropdown',
           },
