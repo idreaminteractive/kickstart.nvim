@@ -331,8 +331,10 @@ require('lazy').setup({
             },
           },
           layout_config = {
-            width = 0.75,
-            height = 0.75,
+            vertical = {
+              width = 0.9,
+              height = 0.9,
+            },
           },
         },
         pickers = {
