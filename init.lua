@@ -324,15 +324,6 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
-          theme = 'dropdown',
-
-          layout_config = {
-            width = 0.8,
-            height = 0.7,
-            vertical = {
-              preview_width = 0.7,
-            },
-          },
           mappings = {
             i = {
               ['<C-j>'] = actions.move_selection_next,
@@ -342,7 +333,15 @@ require('lazy').setup({
         },
         pickers = {
           find_files = {
-            -- theme = 'dropdown',
+            theme = 'dropdown',
+
+            layout_config = {
+              width = 0.8,
+              height = 0.7,
+              vertical = {
+                preview_width = 0.7,
+              },
+            },
             hidden = true,
             file_ignore_patterns = { '.git/' },
           },
