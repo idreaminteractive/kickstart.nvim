@@ -5,6 +5,8 @@ vim.keymap.set('n', '<leader>wj', '<C-w><C-j>', { desc = 'Move focus to the lowe
 vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = 'Close current window' })
 
+vim.keymap.set('n', '<leader>wv', '<C-w><C-v>', { desc = 'Split window vertically' })
+
 require('telescope').setup {
   defaults = {
     mappings = {
