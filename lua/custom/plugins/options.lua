@@ -6,7 +6,7 @@ vim.keymap.set('n', '<leader>wk', '<C-w><C-k>', { desc = 'Move focus to the uppe
 vim.keymap.set('n', '<leader>wq', '<C-w><C-q>', { desc = 'Close current window' })
 
 local actions = require 'telescope.actions'
-vim.keymap.set('i', '<C-j>', actions.move_selection_next)
-vim.keymap.set('i', '<C-k>', actions.move_selection_previous)
+vim.keymap.set('i', '<C-j>', actions.move_selection_next, { desc = 'Next' })
+vim.keymap.set('i', '<C-k>', actions.move_selection_previous, { desc = 'Previous' })
 
 return {}
