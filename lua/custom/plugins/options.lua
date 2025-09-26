@@ -40,6 +40,21 @@ require('telescope').setup {
   },
 }
 
+-- Execute a code action, usually your cursor needs to be on top of an error
+-- or a suggestion from your LSP for this to activate.
+vim.keymap.set({ 'n', 'x' }, '<leader>ca', vim.lsp.buf.code_action, { desc = '[G]oto Code [A]ction' })
+
+-- Find references for the word under your cursor.
+vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
+
+-- Jump to the implementation of the word under your cursor.
+--  Useful when your language has ways of declaring types without an actual implementation.
+vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations, { desc = '[G]oto [I]mplementation' })
+
+-- Jump to the definition of the word under your cursor.
+--  This is where a variable was first declared, or where a function is defined, etc.
+--  To jump back, press <C-t>.
+vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, { desc = '[G]oto [D]efinition' })
 require 'kickstart.plugins.indent_line'
 require 'kickstart.plugins.autopairs'
 
