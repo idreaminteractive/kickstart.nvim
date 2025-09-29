@@ -44,6 +44,8 @@ require('telescope').setup {
 -- or a suggestion from your LSP for this to activate.
 vim.keymap.set({ 'n', 'x' }, '<leader>ca', vim.lsp.buf.code_action, { desc = '[G]oto Code [A]ction' })
 
+vim.keymap.set('n', '<leader>rr', '<cmd>LspRestart<CR>', { desc = 'Restart the LSP' })
+
 -- Find references for the word under your cursor.
 vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, { desc = '[G]oto [R]eferences' })
 
