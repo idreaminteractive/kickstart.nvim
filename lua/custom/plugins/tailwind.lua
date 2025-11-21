@@ -37,12 +37,6 @@ return {
         -- Optional: Tailwind CSS specific settings
         settings = {
           tailwindCSS = {
-            experimental = {
-              classRegex = {
-                -- Add custom regex patterns if needed for specific frameworks or templating languages
-                -- { 'class[:]\\\\s*\"([^\"]*)\"', 1 },
-              },
-            },
             includeLanguages = {
               -- Map specific filetypes to Tailwind CSS language for proper highlighting and completion
               elixir = 'html-eex',
